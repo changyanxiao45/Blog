@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FileUpload CSS RESET</title>
+    <style type="text/css">
+        input[type="file"] {
+            display: none;
+        }
+        .custom-file-upload {
+            border: 1px solid #ccc;
+            display: inline-block;
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <label class="custom-file-upload">
+        <input type="file" id="file-upload"/>
+        Custom Upload
+    </label>
+    <span id="file-selected">未选择文件</span>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $('#file-upload').bind('change',function() {
+            var fileName = '';
+            fileName = $(this).val();
+            $('#file-selected').html(fileName);
+        });
+    </script>
+</body>
+</html>
