@@ -6,6 +6,7 @@ So, to keep it simple, if you have a website with lot of pages and sub-levels, i
 因此，如果你的网页有很多页面和子级，那么为了获得更好的用户体验，你需要用到面包屑。本文将介绍如何创建基于CSS3的面包屑。
 
 ![](/images/css3-breadcrumbs.png)
+
 [View Demo](http://red-team-design.com/dist/uploads/2012/01/css3-breadcrumbs-demo.html "View Demo")
 
 ## The HTML
