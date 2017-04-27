@@ -5,7 +5,7 @@ A breadcrumb navigation allow users to know where they are in a hierarchical str
 So, to keep it simple, if you have a website with lot of pages and sub-levels, in order to increase usability, you need to use breadcrumbs. Having said that, today you’ll learn how to create your own cool CSS3 breadcrumbs.
 因此，如果你的网页有很多页面和子级，那么为了获得更好的用户体验，你需要用到面包屑。本文将介绍如何创建基于CSS3的面包屑。
 
-![](css3-breadcrumbs.png)
+![](images/css3-breadcrumbs.png)
 [View Demo](http://red-team-design.com/dist/uploads/2012/01/css3-breadcrumbs-demo.html "View Demo")
 
 ## The HTML
@@ -37,7 +37,7 @@ Here I used a similar technique to the one I used for creating these CSS3 toolti
 
 这里我用了一点简单的技巧来创建这个示例。通过伪元素叠加的方式，来实现一个有右边框的三角形。深色的三角形会稍微往右移一点，已形成边框的效果。
 
-![](css3-breadcrumbs-1.png)
+![](images/css3-breadcrumbs-1.png)
 
 	#breadcrumbs-one{
 	  background: #eee;
@@ -117,7 +117,7 @@ The CSS shapes built with the pseudo-elements are placed before, respectively af
 
 通过CSS创建的图形伪元素分别放在元素的前后。
 
-![](css3-breadcrumbs-2.png)
+![](images/css3-breadcrumbs-2.png)
 
 	#breadcrumbs-two{
 	  overflow: hidden;
@@ -189,7 +189,7 @@ Using border-radius we will round the corners for our rectangle and square shape
 
 通过border-radius属性，我们设置了长方形和正方形的圆角。同时,我们将正方形旋转，以便获得一个圆角的菱形。
 
-![](css3-breadcrumbs-3.png)
+![](images/css3-breadcrumbs-3.png)
 
 	#breadcrumbs-three{
 	  overflow: hidden;
@@ -251,7 +251,7 @@ Again, with the pseudo-elements you’ll add two rectangles before and after the
 
 我们再次通过伪元素在元素前后添加了长方形，然后可以给它们外层的边框添加上圆角。这仅仅是为了更好看而已。
 
-![](css3-breadcrumbs-4.png)
+![](images/css3-breadcrumbs-4.png)
 
 	#breadcrumbs-four{
 	  overflow: hidden;
