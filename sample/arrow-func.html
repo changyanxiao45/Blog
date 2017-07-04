@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrows</title>
+</head>
+<body>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        // (param1, param2, …, paramN) => { statements }
+        // (param1, param2, …, paramN) => expression
+        // equivalent to: (param1, param2, …, paramN) => { return expression; }
+        const syntax1 = (param1, param2, param3) => {
+            console.log(param1 + param2 + param3);
+        }
+        syntax1(1, 2, 3);// output : 6
+        const syntax2 = (param1, param2, param3) => param1 + param2 + param3
+        console.log(syntax2(1, 2, 3));// output : 6
+
+        const syntax3 = (param1, param2, param3) => {
+            return param1 + param2 + param3;
+        }
+        console.log(syntax3(1, 2, 3));// output : 6
+        
+        // Parentheses are optional when there's only one parameter name:
+        // (singleParam) => { statements }
+        // singleParam => { statements }
+        const syntax4 = (param) => {console.log(param)};
+        const syntax5 = param => {console.log(param)};
+
+        syntax4(1); // output: 1
+        syntax5(2); // output: 2
+
+        // A function with no parameters should be written with a couple of parentheses.
+        const syntax6 = () => { console.log(1); }
+        syntax6(); // output: 1
+
+        // Parenthesize the body of function to return an object literal expression:
+        // params => ({foo: bar})
+        const syntax7 = () => ({foo: 'bar'})
+        console.log(syntax7()); //output Object {foo: "bar"}
+
+        // Rest parameters and default parameters are supported
+        // (param1, param2, ...rest) => { statements }
+        // (param1 = defaultValue1, param2, …, paramN = defaultValueN) => { statements }
+        const syntax8 = (param1, param2, ...restParam) => {
+            let total = 0;
+            restParam.map(elem => {
+                total = total + elem;
+            });
+            return total;
+        };
+        console.log(syntax8(1, 2, 3, 4, 5)); //output 12
+
+        const syntax9 = (param1 = 1, param2 = 2, param3 = 3) => {
+            return param1+param2+param3;
+        };
+        console.log(syntax9()); //output 6
+
+        // Destructuring within the parameter list is also supported
+        const syntax10 = ([a, b] = [1, 2], {x: c} = {x: a + b}) => a + b + c;
+        console.log(syntax10()); // output 6
+    </script>
+</body>
+</html>
